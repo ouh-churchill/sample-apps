@@ -15,8 +15,9 @@ function urlParam(p) {
 }
 
 function getRedirectURI() {
-    return (location.protocol + "//" + location.host + location.pathname)
-        .match(/(.*\/)[^\/]*/)[1];
+    returnURL = (location.protocol + "//" + location.host + location.pathname).match(/(.*\/)[^\/]*/)[1];
+    console.log("getRedirectURI() returnURL='" + returnURL + "'"); 
+    return returnURL;
 }
 
 function refreshApp() {
